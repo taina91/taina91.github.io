@@ -1,0 +1,47 @@
+main > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: calc(12px + 8 * (100vw / 1445));
+  color: black;
+  margin: 1vh 1vw;
+}
+
+.picters {
+  display: grid;
+}
+
+.pic {
+  object-fit: cover;
+  width: 86vw;
+  margin: 3vw;
+  justify-self: center;
+}
+
+.no-active {
+  height: 300px;
+}
+
+.active-horisontal {
+  height: auto;
+}
+
+.active-vertical {
+  max-height: 100vw;
+  height: 100vh;
+  width: auto;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.back-img {
+  max-width: 10vw;
+  padding: 3vw;
+}
+
+.back-link {
+  display: inline;
+  align-self: center;
+}
