@@ -14,8 +14,8 @@ if (screenWidth < 400) {
   nameMe.style.textAlign = "left";
 }
 
-if (screenWidth > 700) {
+if (screenWidth > 800) {
   bio.style.columnCount = "2";
 } else {
-  bio.style.columnCount = "2";
+  bio.style.columnCount = "1";
 }
