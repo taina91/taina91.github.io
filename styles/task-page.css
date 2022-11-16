@@ -1,0 +1,11 @@
+main > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: calc(12px + 12 * (100vw / 1445));
+  margin-top: 3vh;
+}
+
+.main-grid {
+  display: grid;
+}

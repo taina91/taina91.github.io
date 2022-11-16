@@ -1,0 +1,105 @@
+.task-space{
+    background-color: #d9d9d9;
+    width: 70%;
+    padding: 10px;
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.phrases-space{
+    display: grid;
+    padding: 10px;
+    width: 95%;
+}
+
+.phraseRus{
+    justify-self: end;
+}
+
+.phraseEng{
+    justify-self: start;
+    border-radius: 10px;
+}
+
+
+.newColor{
+    background-color: white;
+}
+
+.phrase{
+    position: relative;
+    margin-bottom: 10px;
+    width: 20%;
+    border: 1px black solid;
+    background-color: #cfdaf8;
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: calc(12px + 12 * (100vw / 1445));
+    color: black;
+    transition: 1s;
+}
+
+.phrase:hover{
+    transform: scale(1.1);
+}
+
+.buttons{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    display: block;
+    padding: 10px;
+    background-color: #527be3;
+    border: none;
+    margin: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: calc(12px + 12 * (100vw / 1445));
+    color: black;
+}
+
+.nevidno{
+    display: none;
+}
+
+.warning{
+    display: inline;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: calc(12px + 12 * (100vw / 1445));
+    color: black;
+}
+
+.move {
+    animation: phrase-move 4s;
+}
+
+.unmove{
+    animation: phrase-unmove 4s;
+}
+
+@keyframes phrase-move {
+    from {
+        left: 75%;
+      }
+      to {
+        left: 0%;
+      }
+}
+
+@keyframes phrase-unmove {
+    from {
+        right: 75%;
+      }
+      to {
+        right: 0%;
+      }
+}

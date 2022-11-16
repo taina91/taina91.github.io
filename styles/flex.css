@@ -1,0 +1,133 @@
+.flex-container {
+  display: flex;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000000;
+  border-radius: 5%;
+  background-image: url("../img/relax2.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.elka {
+  position: absolute;
+  width: 100px;
+  bottom: 30px;
+}
+
+.fox {
+  position: absolute;
+  width: 80px;
+  bottom: 30px;
+}
+
+.run {
+  left: 200px;
+  transition: 2s;
+}
+
+.flex-container:hover .run {
+  left: 90px;
+}
+
+.flex-container:active .run {
+  display: none;
+}
+
+.stop {
+  left: 200px;
+}
+
+.flex-container:active .stop {
+  left: 90px;
+}
+
+.sun {
+  position: absolute;
+  width: 50px;
+  right: -100%;
+}
+
+.flex-container:active .sun {
+  animation: sun-danse 3s infinite;
+}
+
+@keyframes sun-danse {
+  0% {
+    right: 10px;
+  }
+  50% {
+    right: 140px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+.text-1 {
+  left: 200px;
+  top: 5px;
+  width: 180px;
+  font-weight: bold;
+  position: absolute;
+  color: green;
+  font-size: 16px;
+  text-align: center;
+  transition: 2s;
+}
+
+.flex-container:hover .text-1 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flex-container:active .text-1 {
+  display: none;
+}
+
+.text-2 {
+  left: 200px;
+  top: 5px;
+  width: 180px;
+  position: absolute;
+  color: orange;
+  font-size: 14px;
+  transform: rotate(30deg);
+}
+
+.flex-container:active .text-2 {
+  top: 70px;
+  left: 50px;
+}
+
+.flex-container:active {
+  animation: jump 4s infinite;
+}
+
+@keyframes jump {
+  0% {
+    margin-bottom: 30px;
+  }
+  25% {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  50% {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  75% {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  100% {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
