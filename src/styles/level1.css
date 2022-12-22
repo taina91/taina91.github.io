@@ -1,0 +1,24 @@
+.list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.list:nth-child(1){
+    height: 50%;
+}
+
+.list:nth-child(2){
+    border-top: 5px dashed #0A0045;
+    height: 50%;
+}
+
+.card{
+    width: 150px;
+    height: 110px;
+}
+
+.hovered{
+    background-color:#CFD1E8;
+}

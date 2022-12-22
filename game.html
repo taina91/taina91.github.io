@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game</title>
+    <link href="src/styles/fonts.css" rel="stylesheet" />
+    <link href="src/styles/styleGame.css" rel="stylesheet" />
+    <link href="src/styles/level1.css" rel="stylesheet" />
+    <link href="src/styles/level2.css" rel="stylesheet" />
+    <link href="src/styles/level3.css" rel="stylesheet" />
+<body>
+    <div class="description desc-level1">
+        <div class="window">
+            <h1>Уровень 1</h1>
+            <p class="prev">
+                На первом уровне тебе предстоить правильно выбрать элементы, 
+                которые относятся к электротехнике.
+            </p>
+            <button class="start start-lev1">Начать</button>
+        </div>
+    </div>
+    <div class="description desc-level2 hide">
+        <div class="window">
+            <h1>Уровень 2</h1>
+            <p class="prev js-prev-lev2">
+                На втором уровне тебе предстоит закончить электросхему, 
+                вставляй в пропуски правильные элементы. Когда ты правильно 
+                соберешь схему, зазвучит музыка.
+            </p>
+            <button class="start start-lev2">Начать</button>
+        </div>
+    </div>
+    <div class="description desc-level3 hide">
+        <div class="window">
+            <h1>Уровень 3</h1>
+            <p class="prev">
+                На третьем уровне тебе нужно правильно решить три задачки, воспользуйся формулой
+                и расчитай значения. Единицу измерения вписывать НЕ нужно. Дробные значения записывай через точку.
+            </p>
+            <button class="start start-lev3">Начать</button>
+        </div>
+    </div>
+    <div class="description desc-bad-end hide">
+        <div class="window">
+            <h1>Ты проиграл :(</h1>
+            <h2 class="reason"></h2>
+            <p class="prev">
+                Не расстраивайся, все совершают ошибки. 
+                Ты можешь начать игру сначала</p>
+            <button class="start restart" style=" width: 231px">Играть заново</button>
+        </div>
+    </div>
+    <div class="description desc-good-end hide">
+        <div class="window" style="height: 50vh">
+            <h1>Ура-ура, ты прошел игру</h1>
+            <h2> Твой результат:</h2>
+            <p class="score-end"></p>
+            <p class="prev">Ты большой молодец, если хочешь, можешь начать игру сначала!</p>
+            <button class="start restart" style=" width: 231px">
+                    Играть заново</button>
+        </div>
+    </div>
+    <div class="hiro">
+        <div class="menu">
+            <div class="menu__item">Время: <p class="time">05:00</p> </div>
+            <div class="menu__item">Счет:  <p class="score">0</p></div>
+            <div class="menu__item">
+                <div class="hearts">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="check check-lev1">Проверить</button>
+                <button class="check check-lev2 hide">Проверить</button>
+                <button class="check check-lev3 hide">Проверить</button>
+                <button class="check endgame">Закончить игру</button>
+            </div>
+        </div>
+        <div class="level level1">
+            <h1 class="task" data-tooltip="Тебе нужно правильно выбрать элементы, которые относятся к электротехнике.">
+                Перенеси элементы, относящиеся к электротехнике в нижнюю область
+            </h1>
+            <div class="nado">
+                <div class="list js-list-on hard-list">
+                    <template id="card-template">
+                        <div class="list__car card js-card" draggable="true">
+                        </div>
+                    </template> 
+                </div>
+                <div class="list js-list-to"></div>
+            </div>
+        </div>
+        <div class="level level2 hide">
+            <h1 class="task" data-tooltip="Тебе нужно закончить электросхему, вставляй в пропуски правильные элементы.">
+                Собери электросхему
+            </h1>
+            <div class="list2 js-card-list-hard hide">
+                <div class="list__card js-card-lev2-hard one" draggable="true">
+                    <img src="src/img/batary.png">
+                </div>
+                <div class="list__card js-card-lev2-hard" draggable="true">
+                    <img src="src/img/led.png">
+                </div>
+                <div class="list__card js-card-lev2-hard two" draggable="true">
+                    <img src="src/img/sound.png">
+                </div>
+                <div class="list__card js-card-lev2-hard" draggable="true">
+                    <img src="src/img/not.png">
+                </div>
+                <div class="list__card js-card-lev2-hard thir" draggable="true">
+                    <img src="src/img/key.png">
+                </div>
+            </div>
+            <div class="list2 js-card-list-lite hide">
+                <div class="list__card js-card-lev2-lite one led-on" draggable="true">
+                </div>
+                <div class="list__card js-card-lev2-lite" draggable="true">
+                    <img src="src/img/not.png">
+                </div>
+                <div class="list__card js-card-lev2-lite two" draggable="true">
+                    <img src="src/img/key.png">
+                </div>
+            </div>
+            <ul class="list3 js-card-list-to-hard hide">
+                <li class="list-to__cell first js-cell-to-hard one"></li>
+                <li class="list-to__cell second js-cell-to-hard two"></li>
+                <li class="list-to__cell third js-cell-to-hard thir"></li>
+            </ul>
+            <ul class="list3-2 js-card-list-to-lite hide">
+                <li class="list-to__cell first js-cell-to-lite one odin"></li>
+                <li class="list-to__cell second js-cell-to-lite two dva"></li>
+            </ul>
+        </div>
+        <div class="level level3 hide">
+            <h1 class="task" data-tooltip="Тебе нужно правильно решить три задачки, воспользуйся формулой и расчитай значения. Единицу измерения вписывать НЕ нужно. Дробные значения записывай через точку.">
+                Реши задачки используя формулу
+            </h1>
+            <div class="formula"></div>
+            <div class="tasks">
+                <p class="task-lev-3 js-task-1">Какова сила тока в резисторе, 
+                    если его сопротивление 12 Ом, 
+                    а напряжение на нем 120 В?</p>
+                
+                <p class="ans">Ответ:</p>
+
+                <input type="text" name="answer1" class="answer">
+               
+                <p class="task-lev-3 js-task-2">Сопротивление проводника 6 Ом, 
+                    а сила тока в нем 0,2 А. 
+                    Определите напряжение на концах проводника.</p>
+                
+                <p class="ans">Ответ:</p>
+                
+                <input type="text" name="answer2" class="answer">
+                
+                <p class="task-lev-3 js-task-3">Определите сопротивление 
+                    проводника, если при напряжении 110 В сила 
+                    тока в нем 2 А.</p>
+                
+                <p class="ans">Ответ:</p>
+            
+                <input type="text" name="answer3" class="answer">
+            </div>
+        </div>
+    </div> 
+    <script src="src/js/start.js"></script>
+    <script src="src/js/level1.js"></script>
+    <script src="src/js/level2.js"></script>
+    <script src="src/js/level3.js"></script>
+</body>

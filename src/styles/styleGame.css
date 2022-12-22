@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hiro{
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 990px;
+   background-color: #414886;
+   font-family: "Shadow";
+}
+
+.level{
+    margin: 20px;
+    background: #FFFFFF;
+    border-radius: 28px;
+}
+
+.menu{
+    margin: 20px;
+    border-radius: 28px;
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+}
+
+.menu__item{
+    width: 300px;
+    height: 65px;
+    margin: auto auto;
+    font-size: 64px;
+    text-align: center;
+    color: #0A0045;
+}
+
+.time, .score{
+    font-size: 48px;
+}
+
+.hearts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heart{
+    width: 55px;
+    height: 48px;
+    padding: 3px;
+    background-image: url("../img/heart.png");
+    background-size: cover;   
+    margin-top: 40px;
+}
+
+.broken{
+    background-image: url("../img/broken-heart.png");
+}
+
+.check{
+    width: 248px;
+    height: 78px;
+    font-family: 'Shadow';
+    font-size: 32px;
+    color: white;
+    background-color: #0A0045;
+    border-radius: 20px;
+    margin: auto auto;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons{
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.nado{
+    margin: 20px;
+    width: 910px;
+    height: 510px;
+}
+
+.description{
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.window{
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+    padding: 15px;
+    border: 5px solid #0A0045;
+    border-radius: 28px;
+    color: #0A0045;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+
+    font-family: "Shadow";
+    font-weight: 500;
+    font-size: 24px;
+
+    display: grid;
+}
+
+.prev{
+    align-self: end;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 24px;
+    color: #0A0045;
+    margin: 10px;
+    align-self: center;
+}
+
+.start{
+    padding: 5px 12px;
+    margin: 30px;
+    width: 171px;
+    height: 54px;
+    font-family: 'Shadow';
+    font-size: 24px;
+    color: white;
+    background-color: #0A0045;
+    border-radius: 17px;
+    margin: auto auto;
+    border: none;
+    cursor: pointer;
+    align-self: end;
+}
+
+[data-tooltip] {
+    position: relative; 
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); 
+    position: absolute; 
+    width: 300px; 
+    left: 270px; 
+    top: 0; 
+    background: #0A0045; 
+    color: #fff; 
+    padding: 0.5em;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: 1s; 
+    font-size: 18px;
+} 
+
+[data-tooltip]:hover::after {
+    opacity: 1; 
+    top: 2em; 
+}
+
+.hide{
+    display: none;
+}

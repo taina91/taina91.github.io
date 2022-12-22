@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>start game</title>
+    <link href="src/styles/styleStart.css" rel="stylesheet" />
+    <link href="src/styles/fonts.css" rel="stylesheet" />
+    <link href="src/styles/animation.css" rel="stylesheet" />
+<body>
+  <main>
+    <div class="hiro">
+        <div class="box">
+          <h1>привет</h1>
+          
+          <input type="text" id="name" placeholder="Как тебя зовут?" required>
+          
+          <h2>Выбери уровень сложности:</h2>
+
+          <label>
+            <input type="radio" name="lev" value="hard" id="hard" style="justify-self: start;"> Сложный
+          </label>
+
+          <label>
+            <input type="radio" name="lev" value="lite" id="lite" checked style="justify-self: start"> Простой
+          </label>
+          <button class="button">Играть!</button>
+        </div>
+      </div>
+
+      <div class="description desc hide">
+        <div class="window">
+            <h2>Вы уже играли?</h2>
+            <div style="display: flex;">
+              <button class="start yes">Да</button>
+              <button class="start no">Нет</button>
+            </div>
+        </div>
+      </div>
+      <div class="description desc-yes hide">
+        <div class="window">
+            <h2>Хотите сбросить свои результаты и пройти игру сначала?</h2>
+            <div style="display: flex;">
+              <button class="start yes-yes">Да</button>
+              <button class="start yes-no">Нет</button>
+            </div>
+        </div>
+      </div>
+      <div class="description desc-no hide">
+        <div class="window">
+            <h2>Введите другое имя</h2>
+            <button class="start ok">ОК</button>
+        </div>
+      </div>
+
+      <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+      </div>
+      <script src="src/js/avtoris.js"></script>
+  </main>
+</body>

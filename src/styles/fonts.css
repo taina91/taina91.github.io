@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Shadow";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Shadow"),
+         url("../fonts/Shadow-Regular.woff") format("woff");
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Montserrat"),
+         url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Montserrat"),
+         url("../fonts/Montserrat-Medium.woff") format("woff");
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Montserrat"),
+         url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+  }

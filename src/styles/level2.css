@@ -1,0 +1,85 @@
+.list2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list3{
+    width: 910px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 412px;
+    background-image: url("../img/sheme.png");
+    background-repeat: no-repeat;
+    border: 5px dashed #0A0045;
+    border-radius: 28px;
+    margin: 20px;
+}
+
+.list3-2{
+    width: 910px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 412px;
+    background-image: url("../img/sheme-2.png");
+    background-repeat: no-repeat;
+    border: 5px dashed #0A0045;
+    border-radius: 28px;
+    margin: 20px;
+}
+
+.list__card{
+    width: 139px;
+    height: 58px;
+    margin: 10px 20px;
+    cursor: all-scroll;
+}
+
+.list-to__cell{
+    width: 139px;
+    height: 58px;
+    list-style-type: none;
+}
+
+.first{
+    position: relative;
+    left: 400px;
+    top: 101px;
+}
+
+.second{
+    position: relative;
+    left: 110px;
+    top: 177px;
+}
+
+.third{
+    position: relative;
+    left: 264px;
+    top: 188px;
+}
+
+.odin{
+    position: relative;
+    left: 375px;
+    top: 87px;
+}
+
+.dva{
+    position: relative;
+    left: 226px;
+    top: 286px;
+}
+
+.hovered{
+    background-color:#CFD1E8;
+}
+
+.led-on{
+    background-image: url("../img/led.png");
+}
+
+.hide{
+    display: none;
+}

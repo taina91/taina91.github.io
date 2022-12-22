@@ -1,0 +1,54 @@
+.task{
+    margin: 50px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: #0A0045;
+}
+
+.formula{
+    margin: 0 auto;
+    /*background-image: url("img/formula.png");*/
+    width: 407px;
+    height: 137px;
+    background-repeat: no-repeat;
+}
+
+.tasks{
+    display: grid;
+    grid-template-columns: 550px 85px 108px;
+    margin: 54px;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.task-lev-3{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0A0045;
+}
+
+.ans{
+    align-self: end;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 24px;
+    color: #0A0045;
+}
+
+.answer{
+    width: 108px;
+    height: 30px;
+    align-self: end;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 24px;
+    color: #0A0045;
+}
+
+.hide{
+    display: none;
+}
