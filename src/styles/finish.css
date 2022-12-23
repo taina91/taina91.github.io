@@ -47,6 +47,10 @@ h2{
     font-size: 24px;
 }
 
+.rating{
+    margin-top: 10px;
+}
+
 .place{
     justify-self: end;
     padding-right: 35px;
@@ -80,7 +84,6 @@ h2{
     cursor: pointer;
     align-self: end;
     left: 227px;
-    top: 20px;
 }
 
 .hide{
