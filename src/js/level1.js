@@ -10,21 +10,57 @@ let itemTo = [];
 
 let tempLev1;
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+let usedLite = [];
+let usedHard = [];
+
 if(tempLevel.difficulty == 'lite'){
     for(let i = 0; i < 5; i++){
+
+        let ind;
+        let flag;
+        do{
+          flag = true;
+          ind = getRandomInt(0, 5);
+          for  (let el in usedLite) {                                         
+            if (usedLite[el] == ind) flag = false;                  
+          }
+        }while(!flag)
+        usedLite.push(ind);
+
         let newCard =  cardTemplate.querySelector('.js-card').cloneNode(true);  
         newCard.style.backgroundImage = "url(" + lite[i] + ")";
         newCard.style.backgroundRepeat = "no-repeat";
+        newCard.style.order = ind+1;
         listOn.appendChild(newCard);
         itemOn.push(i+1);
         tempLev1 = 1;
     }
 } 
+
 if(tempLevel.difficulty == 'hard'){
     for(let i = 0; i < 8; i++){
+        
+        let ind;
+        let flag;
+        do{
+          flag = true;
+          ind = getRandomInt(0, 8);
+          for  (let el in usedHard) {                                         
+            if (usedHard[el] == ind) flag = false;                  
+          }
+        }while(!flag)
+        usedHard.push(ind);
+
         let newCard =  cardTemplate.querySelector('.js-card').cloneNode(true);  
         newCard.style.backgroundImage = "url(" + hard[i] + ")";
         newCard.style.backgroundRepeat = "no-repeat";
+        newCard.style.order = ind+1;
         listOn.appendChild(newCard);
         itemOn.push(i+1);
         tempLev1 = 2;
@@ -64,6 +100,10 @@ const dragAndDrop = () => {
                 cardOn = cards[i];
                 itemTo.push(i+1);
                 itemOn.splice(itemOn.indexOf(i+1), 1);
+                console.log("itemOn");
+                console.log(itemOn);
+                console.log("itemTo");
+                console.log(itemTo);
             }
         }
         this.append(cardOn);
@@ -76,6 +116,10 @@ const dragAndDrop = () => {
                 cardOn = cards[i];
                 itemOn.push(i+1);
                 itemTo.splice(itemTo.indexOf(i+1), 1);
+                console.log("itemOn");
+                console.log(itemOn);
+                console.log("itemTo");
+                console.log(itemTo);
             }
         }
         this.append(cardOn);
