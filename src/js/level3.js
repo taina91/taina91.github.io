@@ -42,7 +42,6 @@ checkButtou3.onclick = function() {
             else {
                 score += 100*(6 - countTryLev2) - (Math.floor((240000-milliseconds)/30000) + 1)*10;
             }
-            alert("Все верно");
             scoreItem.innerHTML = score;
             finishGameGood();
         } 
