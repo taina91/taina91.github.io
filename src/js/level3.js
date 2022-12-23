@@ -24,7 +24,7 @@ let temp = getRandomInt(0, 2);
 
 task1.textContent = tasks[temp*3];
 task2.textContent = tasks[temp*3 + 1];
-task3.textContent = tasks[temp*3 + 1];
+task3.textContent = tasks[temp*3 + 2];
 formula.style.backgroundImage = "url(" + forms[temp] + ")";
 
 let countTryLev3 = 0;
