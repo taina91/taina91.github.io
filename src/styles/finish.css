@@ -65,9 +65,9 @@ h2{
     background-color: #EDEDED;
 }
 
-.but{
+.button{
+    position: relative;
     padding: 5px 12px;
-    margin: 30px;
     width: 171px;
     height: 54px;
     font-family: 'Shadow';
@@ -79,6 +79,8 @@ h2{
     border: none;
     cursor: pointer;
     align-self: end;
+    left: 227px;
+    top: 20px;
 }
 
 .hide{
