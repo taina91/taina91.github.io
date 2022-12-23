@@ -65,6 +65,22 @@ h2{
     background-color: #EDEDED;
 }
 
+.but{
+    padding: 5px 12px;
+    margin: 30px;
+    width: 171px;
+    height: 54px;
+    font-family: 'Shadow';
+    font-size: 24px;
+    color: white;
+    background-color: #0A0045;
+    border-radius: 17px;
+    margin: auto auto;
+    border: none;
+    cursor: pointer;
+    align-self: end;
+}
+
 .hide{
     display: none;
 }
