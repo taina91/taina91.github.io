@@ -168,7 +168,6 @@ checkButtou1.onclick = function() {
         else {
             score += 100*(6 - countTryLev1) - (Math.floor((240000-milliseconds)/30000) + 1)*10;
         }
-        alert("Все верно");
         scoreItem.innerHTML = score;
         pauseTime();
         level1.classList.add("hide");
