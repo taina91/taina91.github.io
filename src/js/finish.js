@@ -1,6 +1,9 @@
 const ratingItemTemplate = document.querySelector('#rating-template').content; 
 const nameMas = JSON.parse(localStorage.getItem('mass'));
 const rating = document.querySelector(".rating");
+const button = document.querySelector(".button");
+const again = document.querySelector(".again");
+
 
 //создание масиива юзеров
 let userMas = [];
@@ -27,3 +30,11 @@ for(let i = 0; i < nameMas.length; i++){
     newItemReting.querySelector(".score").textContent = userMas[i].score;
     rating.appendChild(newItemReting);
 }
+
+button.onclick = function() {
+    window.location.href = 'index.html';
+};
+
+again.onclick = function() {
+    window.location.href = 'startGame.html';
+};
